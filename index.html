@@ -4,14 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Satyam Priyadarshi — Computational Genomics & ML</title>
-<meta name="description" content="Satyam Priyadarshi: research technician at the de Boer Lab (UBC). Benchmarking and building generative models for genomic sequence. Background in physics and astronomy.">
+<meta name="description" content="Satyam Priyadarshi: research technician at the de Boer Lab (UBC), building and benchmarking models for genomic sequence. Trained in physics and astronomy.">
 <meta name="theme-color" content="#05070d">
 <meta property="og:title" content="Satyam Priyadarshi — Computational Genomics & ML">
-<meta property="og:description" content="Benchmarking and building generative models for genomic sequence. From black holes and dark photons, to DNA and ML.">
+<meta property="og:description" content="Machine learning for genomic sequence, from a physicist who used to chase dark photons.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305070d'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%235ce1ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23ffb454'/%3E%3C/svg%3E">
 <script>
-  // Loader only runs when JS is available; without JS the page just shows.
   document.documentElement.classList.add('js');
   try {
     var seen = sessionStorage.getItem('sp-seen');
@@ -22,11 +21,11 @@
 </head>
 <body>
 
-<!-- ============ LOADER: particle accelerator ============ -->
+<!-- ============ LOADER: binary inspiral -> merger -> ripple ============ -->
 <div id="loader" aria-hidden="true">
   <div class="hud">
-    <div class="hud-l"><span id="hud-e">E<sub>beam</sub> 0.00 TeV</span></div>
-    <div class="hud-c" id="hud-s">injecting beams</div>
+    <div class="hud-l"><span id="hud-e">f<sub>gw</sub> 12 Hz</span></div>
+    <div class="hud-c" id="hud-s">detecting inspiral</div>
     <div class="hud-r"><span id="hud-p">0%</span> · click to skip</div>
   </div>
 </div>
@@ -37,9 +36,9 @@
   <a class="brand" href="#top" aria-label="Home"><span class="brand-dot"></span>SP</a>
   <nav aria-label="Primary">
     <a href="#research">Research</a>
-    <a href="#path">Path</a>
-    <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#beyond">Beyond</a>
     <a href="#contact">Contact</a>
   </nav>
   <a class="btn btn-sm" href="cv.pdf" target="_blank" rel="noopener">CV&nbsp;↓</a>
@@ -49,143 +48,65 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
-  <canvas id="event" aria-hidden="true"></canvas>
+  <canvas id="sky" aria-hidden="true"></canvas>
   <div class="wrap hero-inner">
     <p class="eyebrow reveal">Computational genomics · Machine learning</p>
     <h1 class="reveal">Satyam<br>Priyadarshi</h1>
-    <p class="lede reveal">I benchmark, and now build, generative models for genomic sequence, and I care about whether they learn biological mechanism or just a convenient shortcut. Trained as a physicist, working as a genomicist.</p>
     <div class="cta reveal">
       <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
       <a class="btn" href="https://www.biorxiv.org/content/10.1101/2025.07.04.663250v1.full" target="_blank" rel="noopener">GAME preprint</a>
       <a class="btn" href="https://github.com/satyamp03" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <p class="status reveal"><span class="pulse"></span>Research technician, de Boer Lab, UBC School of Biomedical Engineering · Open to MSc (thesis) positions starting 2027</p>
+    <p class="status reveal"><span class="pulse"></span>Research technician, de Boer Lab, UBC School of Biomedical Engineering · Ready to start a Master's or PhD, January 2027</p>
   </div>
   <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section section-alt">
+  <div class="wrap about">
+    <p class="kicker reveal">01 · About</p>
+    <div class="about-grid">
+      <img class="portrait reveal" src="images/portrait.jpg" alt="Satyam Priyadarshi" width="800" height="1091" loading="lazy">
+      <div class="about-copy reveal">
+        <p>I'm a research technician in Carl de Boer's lab at UBC. My background is in physics and astronomy: as an undergrad I grew quantum materials at the Quantum Matter Institute and looked for dark photons with the Belle II group. After graduating I switched to bioinformatics and spent a year analysing gene expression in the Adams Lab at the Beaty Biodiversity Research Centre. Then I joined the de Boer Lab, where I built GAME, a framework for evaluating genomic models in a consistent way. Lately I've been getting into generative models too.</p>
+        <p>I'm also an advisor to the UBC Astronomy Club, mostly helping out with outreach.</p>
+        <p>Outside the lab I like hiking, badminton, tennis and swimming, exploring new restaurants and cafés, and travelling when I can. I've always read a lot of sci-fi, but lately it's been mostly non-fiction. Right now I'm reading <em>Everything Is Tuberculosis</em> by John Green.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ RESEARCH ============ -->
 <section id="research" class="section">
   <div class="wrap">
-    <p class="kicker reveal">01 · Research</p>
-    <h2 class="reveal">From evaluating models to generating sequence</h2>
-    <p class="section-lede reveal">One thread runs through my work: before you trust a genomic model, you need to know what it actually learned. That question moves me from evaluation, through representation, toward generation.</p>
+    <p class="kicker reveal">02 · Research</p>
+    <h2 class="reveal">What I'm working on</h2>
+    <p class="section-lede reveal">Most of what I do comes back to one theme: extracting meaningful signal from noisy, stochastic, high-dimensional data, and asking whether the models we build actually understand the mechanism underneath.</p>
 
-    <div class="cards">
+    <div class="vignettes reveal" aria-hidden="true">
+      <figure class="vignette"><canvas id="vgDna"></canvas><figcaption>genomics</figcaption></figure>
+      <figure class="vignette"><canvas id="vgCode"></canvas><figcaption>machine learning</figcaption></figure>
+    </div>
+
+    <div class="cards cards-2">
       <article class="card reveal">
         <span class="tag">Evaluation</span>
         <h3>GAME: Genomic API for Model Evaluation</h3>
-        <p>Co-first author of an open-source framework that decouples genomic deep-learning models (Predictors) from benchmark datasets (Evaluators) behind REST APIs, so sequence-to-function models can be compared reproducibly across independent compute environments.</p>
+        <p>There are a lot of deep learning models for genomic sequence now, and comparing them fairly is harder than it sounds. Each one expects its own inputs, runs in its own software environment, and usually gets tested on its own favourite benchmarks. GAME fixes that by putting models and benchmarks behind a shared API, so any model can be run against any benchmark, wherever each of them happens to live. I'm co-first author on the preprint.</p>
         <ul class="facts">
-          <li>Scatter–gather load orchestrator (FastAPI, asyncio) that spreads large batches across HPC nodes and reassembles predictions</li>
-          <li>LLM-powered matcher (Gemma 3 via Ollama) that reconciles free-text task, cell-type and species labels between models and benchmarks</li>
-          <li>Containerised AlphaGenome, Borzoi, ChromBPNet and DREAM-RNN with Apptainer/Conda on SLURM clusters</li>
+          <li>I wrote the orchestrator that splits large prediction jobs across HPC nodes and stitches the results back together (FastAPI, asyncio).</li>
+          <li>I also built a matcher that uses a local LLM (Gemma 3 through Ollama) to line up messy task, cell-type and species labels between models and benchmarks.</li>
         </ul>
         <a class="link" href="https://github.com/de-Boer-Lab/Genomic-API-for-Model-Evaluation" target="_blank" rel="noopener">Code on GitHub →</a>
       </article>
 
       <article class="card reveal">
-        <span class="tag tag-b">Representation</span>
-        <h3>Did the model learn mechanism or a shortcut?</h3>
-        <p>Genomic models can quietly latch onto reference-genome or assay artifacts rather than regulatory logic. I am building representation-learning architectures for single-nucleotide-resolution and sparse genomic data, with interpretability as a design goal rather than an afterthought.</p>
-        <ul class="facts">
-          <li>Where should interpretability live: architecture, training objective, or a post-hoc explanation layer?</li>
-          <li>How do we test for mechanism, not just accuracy?</li>
-        </ul>
+        <span class="tag tag-b">What's next</span>
+        <h3>Working on models that understand the regulatory mechanism</h3>
+        <p>A model can score well on a benchmark by picking up quirks of the reference genome or the assay instead of real regulatory logic, and the score alone won't tell you which. That's what I want to dig into next: models for sparse and single-nucleotide-resolution data that are interpretable from the start, not explained after the fact. I'm still working out where interpretability belongs best: in the architecture, in the training objective, or in a layer on top.</p>
+        <p class="soft">I've also started playing with diffusion and flow matching for generating sequences. It's early days, but it's what I'm most excited about right now.</p>
       </article>
-
-      <article class="card reveal">
-        <span class="tag tag-c">Generation</span>
-        <h3>Diffusion and flow matching for sequence</h3>
-        <p>In progress: diffusion and flow-matching approaches for single-nucleotide-resolution genomic modelling. The same family of methods now drives protein design, which is why I see regulatory DNA design and protein engineering as one problem on two substrates.</p>
-        <ul class="facts">
-          <li>Evaluation informs what a good generative model must get right</li>
-          <li>Longer term: generative design of regulatory sequence</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PATH ============ -->
-<section id="path" class="section section-alt">
-  <div class="wrap">
-    <p class="kicker reveal">02 · Path</p>
-    <h2 class="reveal">From black holes and dark photons, to DNA and ML</h2>
-    <p class="section-lede reveal">I started in physics and astronomy. Reconstructing rare signals from enormous simulated event streams turned out to be good training for asking what a genomic model is really seeing.</p>
-
-    <ol class="timeline" id="timeline">
-      <li class="reveal">
-        <span class="when">Oct 2024 – present</span>
-        <h3>Research Assistant &amp; Lab Technician · de Boer Lab</h3>
-        <p class="where">School of Biomedical Engineering, UBC</p>
-        <p>Built GAME and its orchestration and matching modules, ran large GPU benchmarking workloads on UBC ARC Sockeye and Digital Research Alliance of Canada clusters, and now work on generative sequence modelling.</p>
-      </li>
-      <li class="reveal">
-        <span class="when">Aug 2023 – Aug 2024</span>
-        <h3>Research Assistant &amp; Lab Technician · Adams Lab</h3>
-        <p class="where">Beaty Biodiversity Research Centre, UBC</p>
-        <p>End-to-end bulk and single-cell RNA-seq pipelines (STAR, HISAT2, DESeq2, edgeR) and alternative-splicing analysis with rMATS and SUPPA2, in polyploid <em>Brassica napus</em>.</p>
-      </li>
-      <li class="reveal">
-        <span class="when">Sep 2022 – Apr 2023</span>
-        <h3>Honours thesis · Search for low-mass dark photons at Belle II</h3>
-        <p class="where">Belle II group, UBC · supervised by Dr. Christopher Hearty</p>
-        <p>Analysed over 20 million simulated Monte Carlo events with tracking and clustering algorithms, and designed signal-selection cuts for an e⁺e⁻γ signature, validated against Bhabha and digamma backgrounds across four run conditions.</p>
-      </li>
-      <li class="reveal">
-        <span class="when">Feb 2020 – May 2023</span>
-        <h3>Undergraduate Research Assistant · Quantum Materials Design Lab</h3>
-        <p class="where">Stewart Blusson Quantum Matter Institute · Dr. Meigan Aronson &amp; Dr. Alannah Hallas</p>
-        <p>Crystal growth and characterisation of topological materials (neutron scattering, XRD, SEM/STM, PPMS/MPMS), Rietveld refinements, and eight years of growth data organised with Pandas and SQL. Co-authored work on spin dynamics in a metallic spin chain.</p>
-      </li>
-      <li class="reveal">
-        <span class="when">2018 – 2023</span>
-        <h3>BSc, Combined Honours in Physics and Astronomy</h3>
-        <p class="where">University of British Columbia</p>
-        <p>Outside the lab: advisor and outreach coordinator for the UBC Astronomy Club, and TA for introductory physics supporting 2000+ students.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section id="projects" class="section">
-  <div class="wrap">
-    <p class="kicker reveal">03 · Projects</p>
-    <h2 class="reveal">Selected projects</h2>
-    <div class="grid2">
-      <a class="proj reveal" href="https://github.com/de-Boer-Lab/Genomic-API-for-Model-Evaluation" target="_blank" rel="noopener">
-        <span class="proj-tag">Genomics · Infrastructure</span>
-        <h3>GAME</h3>
-        <p>Client–server benchmarking ecosystem for sequence-to-function models, with typed error reporting, content negotiation and community module-building docs.</p>
-        <span class="link">github.com/de-Boer-Lab →</span>
-      </a>
-      <a class="proj reveal" href="https://2022.spaceappschallenge.org/challenges/2022-challenges/radio-enthusiasts/teams/space-cadys/project" target="_blank" rel="noopener">
-        <span class="proj-tag">Astronomy · Data</span>
-        <h3>NASA Space Apps 2022, Global Finalist</h3>
-        <p>Used ArcGIS Pro and data mining on netCDF files from the ISS plasma monitor to improve ionosphere mapping resolution, with 3D visualisation of electron density.</p>
-        <span class="link">Project page →</span>
-      </a>
-      <div class="proj reveal">
-        <span class="proj-tag">Quantum · ML</span>
-        <h3>iQuHACK 2023, IonQ challenge</h3>
-        <p>Quantum image classifier that encodes camera-captured images into circuits using the FRQI representation.</p>
-      </div>
-      <a class="proj reveal" href="https://github.com/satyamp03/RecommendationEngine" target="_blank" rel="noopener">
-        <span class="proj-tag">ML · Software</span>
-        <h3>Recommendation engine</h3>
-        <p>Collaborative-filtering recommender over 250+ TV shows, served with a Flask API and evaluated with precision and recall.</p>
-        <span class="link">github.com/satyamp03 →</span>
-      </a>
-    </div>
-
-    <div class="skills reveal">
-      <h3>Toolbox</h3>
-      <div class="chips">
-        <span>Python</span><span>PyTorch</span><span>JAX</span><span>TensorFlow</span><span>R / Bioconductor</span><span>C++</span><span>Julia</span><span>SQL</span>
-        <span>FastAPI</span><span>SLURM / HPC</span><span>Apptainer / Docker</span><span>Ollama</span><span>Astropy</span><span>Qiskit</span><span>AWS / GCP</span><span>LaTeX</span>
-      </div>
     </div>
   </div>
 </section>
@@ -193,7 +114,7 @@
 <!-- ============ PUBLICATIONS ============ -->
 <section id="publications" class="section section-alt">
   <div class="wrap">
-    <p class="kicker reveal">04 · Publications &amp; talks</p>
+    <p class="kicker reveal">03 · Publications &amp; talks</p>
     <h2 class="reveal">Publications and presentations</h2>
 
     <div class="pub reveal">
@@ -207,18 +128,92 @@
       <li><span class="date">May 2026</span><span>GAME · <em>CSHL 90th Symposium: AI in Biology</em>, Cold Spring Harbor, NY · poster</span></li>
       <li><span class="date">Jun 2025</span><span>GAME · <em>Cascadia Advanced Genomics Conference</em>, Vancouver · poster</span></li>
       <li><span class="date">Jul 2024</span><span>Subgenome-dominant expression and alternative splicing in response to <em>Sclerotinia</em> infection in polyploid <em>Brassica napus</em> · ICAR 2024, San Diego · poster</span></li>
-      <li><span class="date">Jan 2024</span><span>Same study · <em>Plant &amp; Animal Genome XXXI</em>, San Diego · abstract</span></li>
+      <li><span class="date">Jan 2024</span><span>Subgenome-dominant expression and alternative splicing in response to <em>Sclerotinia</em> infection in polyploid <em>Brassica napus</em> and progenitors · <em>Plant &amp; Animal Genome XXXI</em>, San Diego · abstract</span></li>
       <li><span class="date">Mar 2023</span><span>Spin dynamics in a metallic spin chain Ti<sub>4</sub>MnBi<sub>2</sub> · <em>APS March Meeting 2023</em>, Las Vegas · abstract</span></li>
     </ul>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section">
+  <div class="wrap">
+    <p class="kicker reveal">04 · Experience</p>
+    <h2 class="reveal">Experience and education</h2>
+
+    <div class="path-groups">
+      <div class="path-group">
+        <h3 class="path-group-title">Work experience</h3>
+        <ol class="timeline" data-timeline>
+          <li class="reveal">
+            <span class="when">Oct 2024 – present</span>
+            <h4>Research Assistant &amp; Lab Technician · de Boer Lab</h4>
+            <p class="where">School of Biomedical Engineering, UBC</p>
+            <p>Built GAME, including its job orchestration and label matching, and ran a lot of large GPU benchmarking jobs on UBC's Sockeye cluster and the Digital Research Alliance of Canada. These days I'm also working on generative models for DNA sequence.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">Aug 2023 – Aug 2024</span>
+            <h4>Research Assistant &amp; Lab Technician · Adams Lab</h4>
+            <p class="where">Beaty Biodiversity Research Centre, UBC</p>
+            <p>Built bulk and single-cell RNA-seq pipelines (STAR, HISAT2, DESeq2, edgeR) and studied alternative splicing with rMATS and SUPPA2. I worked in <em>Arabidopsis thaliana</em> and in canola (<em>Brassica napus</em>), a polyploid where most genes come in more than one copy.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="path-group">
+        <h3 class="path-group-title">Research experience (undergrad)</h3>
+        <ol class="timeline" data-timeline>
+          <li class="reveal">
+            <span class="when">Sep 2022 – Apr 2023</span>
+            <h4>Honours thesis · Search for low-mass dark photons at Belle II</h4>
+            <p class="where">Belle II group, UBC · supervised by Dr. Christopher Hearty</p>
+            <p>I went through more than 20 million simulated collision events looking for the e⁺e⁻γ signature a light dark photon would leave, designed the cuts to pick it out, and checked them against Bhabha and digamma backgrounds across four run conditions.</p>
+            <figure class="vignette entry-fig" aria-hidden="true"><canvas id="vgEvent"></canvas></figure>
+          </li>
+          <li class="reveal">
+            <span class="when">Feb 2020 – May 2023</span>
+            <h4>Undergraduate Research Assistant · Quantum Materials Design Lab</h4>
+            <p class="where">Stewart Blusson Quantum Matter Institute · Dr. Meigan Aronson &amp; Dr. Alannah Hallas</p>
+            <p>Three years of growing crystals of topological materials and characterising them (neutron scattering, XRD, SEM/STM, PPMS/MPMS, Rietveld refinement). I also turned eight years of the lab's crystal-growth records into a proper database with Pandas and SQL, and co-authored work on spin dynamics in a metallic spin chain.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="path-group">
+        <h3 class="path-group-title">Education</h3>
+        <ol class="timeline" data-timeline>
+          <li class="reveal">
+            <span class="when">2018 – 2023</span>
+            <h4>BSc, Combined Honours in Physics and Astronomy</h4>
+            <p class="where">University of British Columbia</p>
+            <p>I also TA'd introductory physics for several terms, working with more than 2,000 students along the way.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEYOND ============ -->
+<section id="beyond" class="section section-alt">
+  <div class="wrap">
+    <p class="kicker reveal">05 · Beyond the lab</p>
+    <h2 class="reveal">Astronomy outreach and other projects</h2>
+    <p class="section-lede reveal">Genomics and ML take up most of my time these days, but not all of it.</p>
+    <div class="retro reveal" aria-hidden="true"><canvas id="shuttleScene"></canvas></div>
+
+    <div class="beyond-copy reveal">
+      <p>From 2023 to 2025 I was Advisor and Outreach Coordinator for the UBC Astronomy Club, and I still help out as an advisor. The outreach side mostly meant turning astronomy topics into short videos and podcasts, and taking telescopes and talks out to local schools.</p>
+      <p>On my GitHub you'll also find a few older side projects: a quantum image classifier I made for IonQ's challenge at <a class="link" href="https://github.com/satyamp03" target="_blank" rel="noopener">iQuHACK 2023</a>, a <a class="link" href="https://2022.spaceappschallenge.org/challenges/2022-challenges/radio-enthusiasts/teams/space-cadys/project" target="_blank" rel="noopener">NASA Space Apps</a> project where we mapped the ionosphere using plasma data from the ISS (we ended up global finalists in 2022), and a couple of early machine learning projects on recommendation systems and NLP.</p>
+    </div>
   </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="section">
   <div class="wrap contact">
-    <p class="kicker reveal">05 · Contact</p>
+    <p class="kicker reveal">06 · Contact</p>
     <h2 class="reveal">Let's talk</h2>
-    <p class="section-lede reveal">I'm looking for a thesis-based MSc with a group working on generative modelling, representation learning, or interpretability for biological data. The easiest way to reach me is email.</p>
+    <p class="section-lede reveal">I'm looking for a thesis-based Master's or PhD starting in January 2027, ideally with a group working on generative models, representation learning or interpretability for biological data. Email is the best way to reach me.</p>
     <div class="cta reveal">
       <a class="btn btn-primary" href="mailto:satyam.priyadarshi@outlook.com">satyam.priyadarshi@outlook.com</a>
       <a class="btn" href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
@@ -236,7 +231,7 @@
 <footer class="footer">
   <div class="wrap">
     <span>© 2026 Satyam Priyadarshi</span>
-    <button id="replay" class="linkbtn" type="button">↻ replay the collision</button>
+    <button id="replay" class="linkbtn" type="button">↻ replay the merger</button>
   </div>
 </footer>
 

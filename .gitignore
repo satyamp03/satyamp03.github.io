@@ -1,0 +1,6 @@
+# macOS folder metadata
+.DS_Store
+
+# only publish the images the site actually uses
+images/*
+!images/portrait.jpg
